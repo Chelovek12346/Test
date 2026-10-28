@@ -2,22 +2,22 @@ from collections import defaultdict
 import heapq
 
 
-# n, m = map(int, input().split())
-#
-# e = [list(map(int, input().split())) for _ in range(m)]
-# di = [30000]*(n+1)
-# di[1] = 0
-# for _ in range(n-1):
-#     for i in e:
-#         if di[i[0]] != 30000:
-#             di[i[1]] = min(di[i[1]], di[i[0]] + i[2])
-#
-# print(*di[1:])
-#
-#
+n, m = map(int, input().split())
+
+e = [list(map(int, input().split())) for _ in range(m)]
+di = [30000]*(n+1)
+di[1] = 0
+for _ in range(n-1):
+    for i in e:
+        if di[i[0]] != 30000:
+            di[i[1]] = min(di[i[1]], di[i[0]] + i[2])
+
+print(*di[1:])
 
 
-# n,s,f = map(int,input().strip().split())
+
+
+n,s,f = map(int,input().strip().split())
 
 n = int(input())
 l = [list(map(int,input().strip().split())) for _ in range(n)]
